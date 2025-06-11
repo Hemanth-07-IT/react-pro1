@@ -7,7 +7,7 @@ const BlogPostList = ({ posts }) => {
   if (!posts || posts.length === 0) {
     return <div className={styles.emptyMessage}>No blog posts available.</div>;
   }
-
+// Changes have been made
   return (
     <div className={styles.blogPostList}>
       {posts.map((post) => (
