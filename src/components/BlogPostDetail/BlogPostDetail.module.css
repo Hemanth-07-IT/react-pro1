@@ -1,0 +1,122 @@
+/* Reset font for the component */
+.blogPostDetail {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  color: #333;
+  /* For responsive max width & padding, overridden below */
+}
+
+/* Links inside content */
+.content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.content a:hover,
+.content a:focus {
+  color: #0056b3;
+  outline: none;
+}
+
+/* Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .blogPostDetail {
+    max-width: 800px;
+    padding: 40px;
+  }
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .author {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .date {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 30px;
+  }
+  .notFound {
+    font-size: 18px;
+    color: #999;
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+/* Tablet (769px to 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .blogPostDetail {
+    max-width: 700px;
+    padding: 30px 20px;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 18px;
+  }
+  .author {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  .date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .content {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 25px;
+  }
+  .notFound {
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .blogPostDetail {
+    width: 100%;
+    padding: 20px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  .date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+  }
+  .content {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+  .notFound {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+  }
+}

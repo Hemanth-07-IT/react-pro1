@@ -1,0 +1,27 @@
+/* formButtons.module.css */
+
+.buttonPrimary {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.buttonPrimary:hover {
+  background-color: #0056b3;
+}
+
+.buttonWrapper {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.buttonFullWidth {
+  width: 100%;
+  margin-top: 15px;
+}

@@ -1,11 +1,11 @@
-// BlogPostList.js
+// src/components/BlogPostList.jsx
 import React from 'react';
-import BlogPostItem from './BlogPostItem';
+import BlogPostItem from '../BlogPostItem/BlogPostItem';
 import styles from './BlogPostList.module.css';
 
 const BlogPostList = ({ posts }) => {
   if (!posts || posts.length === 0) {
-    return <div className={styles.emptyMessage}>No blog posts available.</div>;
+    return <p className={styles.noPosts}>No blog posts available.</p>;
   }
 
   return (

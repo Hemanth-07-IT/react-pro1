@@ -3,85 +3,92 @@
 .blogPostForm {
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
   font-family: Arial, sans-serif;
-  padding: 1rem;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
 label {
   font-size: 16px;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
 input,
 textarea {
   font-size: 16px;
   color: #333;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 0.5rem;
   width: 100%;
   box-sizing: border-box;
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid #007BFF;
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 .error {
-  color: #FF0000;
   font-size: 14px;
-  margin-top: 0.25rem;
+  color: #ff0000;
+  margin-top: 5px;
 }
 
-.buttonGroup {
-  display: flex;
-  justify-content: flex-end;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  background-color: #007BFF;
+.submitButton {
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
+  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
-button:disabled {
-  background-color: #ccc;
+.submitButton:disabled {
+  background-color: #6c757d;
   cursor: not-allowed;
 }
 
-/* Responsive styles */
-@media screen and (min-width: 1200px) {
+/* Desktop (>=1200px): Two-column layout */
+@media (min-width: 1200px) {
   .formGroup {
     flex-direction: row;
     align-items: center;
   }
 
   label {
-    width: 200px;
+    width: 30%;
     text-align: right;
-    margin-right: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
   }
 
   input,
   textarea {
-    flex: 1;
+    width: 70%;
+  }
+
+  .error {
+    margin-left: 30%;
+  }
+
+  .submitButton {
+    margin-left: 30%;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Mobile (<=768px): Stacked layout */
+@media (max-width: 768px) {
   label {
     font-size: 14px;
   }
@@ -95,8 +102,8 @@ button:disabled {
     font-size: 12px;
   }
 
-  button {
+  .submitButton {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 15px;
   }
 }
