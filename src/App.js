@@ -43,13 +43,20 @@ const App = () => {
     setPosts(posts.map((p) => (p.id === updatedPost.id ? updatedPost : p)));
   };
   
+  const handleDeletePost = (id) => {
+    setPosts(posts.filter((p) => p.id !== id));
+  };
+  
   return (
     <div className="app">
       <h1>Blog Posts</h1>
       <Link to="/new" className="newPostLink">➕ Create New Post</Link>
       <Routes>
         <Route path="/" element={<BlogPostList posts={posts} />} />
-        <Route path="/posts/:id" element={<BlogPostPage posts={posts} />} />
+        <Route
+          path="/posts/:id"
+          element={<BlogPostPage posts={posts} onDeletePost={handleDeletePost} />}
+        />
         <Route path="/new" element={<NewPostPage onAddPost={handleAddPost} />} />
         <Route
           path="/posts/:id/edit"
