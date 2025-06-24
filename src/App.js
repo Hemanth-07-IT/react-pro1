@@ -1,8 +1,10 @@
 // src/App.js
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
 import BlogPostList from './components/BlogPostList';
 import BlogPostPage from './components/BlogPostPage';
+import NewPostPage from './components/NewPostPage';
+import EditPostPage from './components/EditPostPage';
 import './App.css';
 
 export const samplePosts = [
@@ -31,12 +33,28 @@ export const samplePosts = [
 ];
 
 const App = () => {
+  const [posts, setPosts] = useState(samplePosts);
+
+  const handleAddPost = (newPost) => {
+    setPosts([...posts, { id: (posts.length + 1).toString(), ...newPost }]);
+  };
+  
+  const handleUpdatePost = (updatedPost) => {
+    setPosts(posts.map((p) => (p.id === updatedPost.id ? updatedPost : p)));
+  };
+  
   return (
     <div className="app">
       <h1>Blog Posts</h1>
+      <Link to="/new" className="newPostLink">➕ Create New Post</Link>
       <Routes>
-        <Route path="/" element={<BlogPostList posts={samplePosts} />} />
-        <Route path="/posts/:id" element={<BlogPostPage posts={samplePosts} />} />
+        <Route path="/" element={<BlogPostList posts={posts} />} />
+        <Route path="/posts/:id" element={<BlogPostPage posts={posts} />} />
+        <Route path="/new" element={<NewPostPage onAddPost={handleAddPost} />} />
+        <Route
+          path="/posts/:id/edit"
+          element={<EditPostPage posts={posts} onUpdatePost={handleUpdatePost} />}
+        />
       </Routes>
     </div>
   );

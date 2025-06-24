@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.newPostLink {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin: 10px 0 20px 0;
+  text-decoration: none;
+  background-color: #007BFF;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.newPostLink:hover {
+  background-color: #0056b3;
+}

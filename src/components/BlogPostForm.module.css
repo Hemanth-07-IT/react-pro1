@@ -1,0 +1,87 @@
+.blogPostForm {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+  flex: 2;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+.error {
+  flex-basis: 100%;
+  color: #FF0000;
+  font-size: 14px;
+  text-align: left;
+  margin-left: calc(33%);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007BFF;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .formGroup label {
+    text-align: left;
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    flex: unset;
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .error {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  button {
+    float: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+}

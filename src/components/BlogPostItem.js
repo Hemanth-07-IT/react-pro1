@@ -8,7 +8,7 @@ const BlogPostItem = ({ id, title, summary, date, url }) => {
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 
   return (
@@ -18,6 +18,9 @@ const BlogPostItem = ({ id, title, summary, date, url }) => {
       </Link>
       <p className={styles.summary}>{summary}</p>
       <p className={styles.date}>Published on {formattedDate}</p>
+      <Link to={`/posts/${id}/edit`} className={styles.editLink}>
+        Edit
+      </Link>
     </div>
   );
 };
