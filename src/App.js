@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
 import BlogPostList from './components/BlogPostList';
 import BlogPostPage from './components/BlogPostPage';
 import NewPostPage from './components/NewPostPage';
@@ -48,9 +49,7 @@ const App = () => {
   };
   
   return (
-    <div className="app">
-      <h1>Blog Posts</h1>
-      <Link to="/new" className="newPostLink">➕ Create New Post</Link>
+    <Layout>
       <Routes>
         <Route path="/" element={<BlogPostList posts={posts} />} />
         <Route
@@ -63,7 +62,7 @@ const App = () => {
           element={<EditPostPage posts={posts} onUpdatePost={handleUpdatePost} />}
         />
       </Routes>
-    </div>
+    </Layout>
   );
 };
 

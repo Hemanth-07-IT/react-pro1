@@ -1,0 +1,70 @@
+/* src/components/NavBar.module.css */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #003366;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.links a:hover,
+.mobileMenu a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mobileMenu a {
+  font-size: 18px;
+  padding: 20px;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
