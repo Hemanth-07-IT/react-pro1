@@ -54,3 +54,13 @@
     padding: 15px;
   }
 }
+
+.editLink {
+  font-size: 14px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.editLink:hover {
+  text-decoration: underline;
+}
