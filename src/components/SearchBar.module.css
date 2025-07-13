@@ -1,0 +1,38 @@
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput {
+  width: 250px;
+  max-width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline-color: #007BFF;
+  font-size: 16px;
+}
+
+.searchButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    width: 100%;
+  }
+
+  .searchInput {
+    flex: 1;
+    width: 100%;
+  }
+
+  .searchButton {
+    font-size: 24px;
+  }
+}
